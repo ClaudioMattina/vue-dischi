@@ -4,7 +4,7 @@
         <div id="main-container">
 
         <MainElement v-for=" (element, index) in elementList" :key="index"
-        :oggetto="ciao" />
+         />
 
   </div>
     </div>
@@ -47,14 +47,23 @@ export default {
 
     #color-container{
          background-color: rgb(19, 19, 20); ;
+         
+         width: 100vw;
+         display: flex;
+         align-items: center;
+
+            #main-container{
+        
+            width: 70%;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            
+
+        }
     }
 
-    #main-container{
-        
-        height: 90vh;
-        width: 60%;
-        margin: 0 auto;
-        
-    }
+       
 
 </style>
