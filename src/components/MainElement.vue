@@ -1,8 +1,8 @@
 <template>
   <div class="my-scheda-container">
-     
+     <img src="" alt="">
       <div class="info-container">
-          <h2>CIAO</h2>
+          <h2> {{elementList.title}} </h2>
           <p>Ciao</p>
           <p>1995</p>
       </div>
@@ -11,7 +11,8 @@
 
 <script>
 export default {
-    name:"Element"
+    name:"ElementIndex",
+    props: {"ciao" : Object}
 }
 </script>
 
