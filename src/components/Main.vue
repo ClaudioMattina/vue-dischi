@@ -4,7 +4,7 @@
         <div id="main-container">
 
         <MainElement v-for=" (element, index) in elementList" :key="index"
-         />
+        :info="element" />
 
   </div>
     </div>

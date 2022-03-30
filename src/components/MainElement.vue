@@ -2,13 +2,13 @@
 
   <div class="my-scheda-container">
       <div class="img-container">
-          <img src="https://i0.wp.com/rkonair.com/wp-content/uploads/2020/11/ACDC.jpg?fit=1800%2C1200&ssl=1" alt="">
+          <img src="info.poster" alt="info.title">
       </div>
      
       <div class="info-container">
-          <h2>TITOLO</h2>
-          <p>Nome artista</p>
-          <p>1995</p>
+          <h5> {{ info.title }} </h5>
+          <p>{{ info.author }}</p>
+          <p>{{ info.year }}</p>
       </div>
   </div>
 
@@ -17,7 +17,7 @@
 <script>
 export default {
     name:"ElementIndex",
-    /* props: {"ciao" : Object} */
+    props: {"info" : Object}
 }
 </script>
 
@@ -49,10 +49,12 @@ export default {
                 align-items: center;
                 color: lightgreen;
                 height: 30%;
+                
 
 
-                    h2{
+                    h5{
                         color: white;
+                        font-size: .4;
                     }
             }
 
