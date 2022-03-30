@@ -1,9 +1,13 @@
 <template>
-  <div id="main-container">
 
-      <MainElement />
+    <div id="color-container">
+        <div id="main-container">
+
+        <MainElement />
 
   </div>
+    </div>
+  
 </template>
 
 <script>
@@ -18,11 +22,18 @@ export default {
 }
 </script>
 
-<style langh="scss" scoped>
+<style lang="scss" scoped>
+
+    #color-container{
+         background-color: rgb(19, 19, 20); ;
+    }
 
     #main-container{
-        background-color: rgb(19, 19, 20);
+        
         height: 90vh;
+        width: 60%;
+        margin: 0 auto;
+        
     }
 
 </style>

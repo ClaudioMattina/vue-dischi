@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style langh="scss" scoped>
+<style lang="scss" scoped>
     #my-header{
         background-color: grey;
         height: 10vh;
