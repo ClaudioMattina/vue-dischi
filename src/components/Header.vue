@@ -1,14 +1,31 @@
 <template>
-  
+  <div>
+
     <div id="my-header">
 
+        <div class="my-select">
+            <select name="generi" id="">
+                <option v-for="(element, index) in elementList " :key="index" value="">{{ element.genre }}</option>
+             </select>
+        </div>
+        
     </div>
+
+    <Main />
+  </div>
+  
+
+
 
 </template>
 
 <script>
+import Main from './Main.vue'
 export default {
-    name:"HeaderIndex"
+    name:"HeaderIndex",
+    components:{
+        Main
+    }
 }
 </script>
 
@@ -17,5 +34,8 @@ export default {
         background-color: grey;
         height: 10vh;
         margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>

@@ -2,19 +2,16 @@
 
     <div id="color-container">
 
-        <div class="my-select">
-            <select name="generi" id="">
-                <option v-for="(element, index) in elementList" :key="index" value="">{{ element.genre }}</option>
-             </select>
-        </div>
+      <!-- qui -->
+
         <div id="main-container">
 
             
-
             <MainElement v-for=" (element, index) in elementList" :key="index"
             :info="element" />
 
         </div>
+        
     </div>
   
 </template>
@@ -33,11 +30,29 @@ export default {
     data: function() {
         return{
             elementList : null,
+            /* whiteList : [] */
         }
     },
 
     created: function(){
         this.apiInfo()
+    },
+    computed:{
+
+        /* genreFilter(){
+            
+            const whiteList=[]
+            
+            for(i = 0; i < elementList.length; i++){
+                if(!whiteList.include(elementList[i].genre)){
+                    whiteList.push(elementList[i].genre)
+
+                }
+
+            }
+            return whiteList
+            
+        } */
     },
 
     methods:{
@@ -46,7 +61,9 @@ export default {
                 this.elementList = result.data.response
                 console.log(result.data.response)
             })
-        }
+        },
+
+        
     }
 }
 </script>
@@ -62,9 +79,6 @@ export default {
          flex-direction: column;
          justify-content: center;
 
-            .my-select{ 
-                margin: 20px;
-            }
 
             #main-container{
         
