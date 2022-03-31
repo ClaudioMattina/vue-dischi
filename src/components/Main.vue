@@ -1,12 +1,20 @@
 <template>
 
     <div id="color-container">
+
+        <div class="my-select">
+            <select name="generi" id="">
+                <option v-for="(element, index) in elementList" :key="index" value="">{{ element.genre }}</option>
+             </select>
+        </div>
         <div id="main-container">
 
-        <MainElement v-for=" (element, index) in elementList" :key="index"
-        :info="element" />
+            
 
-  </div>
+            <MainElement v-for=" (element, index) in elementList" :key="index"
+            :info="element" />
+
+        </div>
     </div>
   
 </template>
@@ -51,6 +59,12 @@ export default {
          width: 100vw;
          display: flex;
          align-items: center;
+         flex-direction: column;
+         justify-content: center;
+
+            .my-select{ 
+                margin: 20px;
+            }
 
             #main-container{
         
@@ -59,7 +73,6 @@ export default {
             height: 100%;
             display: flex;
             flex-wrap: wrap;
-            
 
         }
     }
