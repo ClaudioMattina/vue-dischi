@@ -8,7 +8,7 @@
                 <option v-for="(element, index) in elementList " :key="index" value="">{{ element.genre }}</option>
              </select>
         </div>
-        
+
     </div>
 
     <Main />
@@ -20,11 +20,32 @@
 </template>
 
 <script>
+
 import Main from './Main.vue'
+/* import axios from "axios"; */
+
 export default {
     name:"HeaderIndex",
     components:{
         Main
+    },
+
+    data: function() {
+        return{
+            elementList : null,
+            
+        }
+    },
+
+    methods:{
+        apiInfo(){
+            axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((result) =>{
+                this.elementList = result.data.response
+                console.log(result.data.response)
+            })
+        },
+
+        
     }
 }
 </script>
