@@ -2,7 +2,7 @@
 
   <div class="my-scheda-container">
       <div class="img-container">
-          <img src="info.poster" alt="info.title">
+          <img :src="info.poster" alt="">
       </div>
      
       <div class="info-container">
